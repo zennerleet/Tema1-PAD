@@ -199,12 +199,12 @@ void checkFiles()
 		if (fileIdx != -1) continue;
 		if (serverFiles[i].type == 1)
     {
-			printf("File %s does not exist on the server, must be fetched.\n", serverFiles[i].path);
+			printf("File %s does not exist on the client, must be fetched.\n", serverFiles[i].path);
 			filesToBeUpdated[updatedCount++] = i;
 		}
 		else
     {
-      printf("Directory %s does not exist on the server, must be created.\n", serverFiles[i].path);
+      printf("Directory %s does not exist on the client, must be created.\n", serverFiles[i].path);
 			mkdir(serverFiles[i].path, 0777);
 		}
 	}
